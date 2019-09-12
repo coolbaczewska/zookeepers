@@ -19,6 +19,42 @@ html {
 
 /*-----------ZOE'S CSS--------------*/
 
+.footer {
+  background-color: #104573;
+      position: fixed;
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: normal 16px sans-serif;
+  padding: 45px 50px;
+    position: fixed;
+  left: 0;
+  bottom: 0;
+}
+
+.footer-address {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  color: white;
+
+
+}
+
+.footer-right a{
+vertical-align: middle;
+    float: right;
+  max-width: 300px;
+    text-decoration: none;
+  color: white;
+    font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+    padding: 20px;
+
+}
+
+
 /*----------LISA'S CSS-------------*/
 
 /*----------JULIA'S CSS------------*/
