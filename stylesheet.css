@@ -26,7 +26,7 @@ html {
   width: 100%;
   text-align: left;
   font: normal 16px sans-serif;
-  padding: 45px 50px;
+  padding: 50px 50px;
     position: fixed;
   left: 0;
   bottom: 0;
@@ -37,12 +37,13 @@ html {
   font-weight: bold;
   color: #ffffff;
   color: white;
-
+position: absolute;
 
 }
 
 .footer-right a{
-vertical-align: middle;
+    display: inline;
+    padding-right: 30px;
     float: right;
   max-width: 300px;
     text-decoration: none;
@@ -50,7 +51,7 @@ vertical-align: middle;
     font-size: 18px;
   font-weight: bold;
   color: #ffffff;
-    padding: 20px;
+
 
 }
 
