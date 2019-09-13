@@ -284,3 +284,21 @@ body {
 
 
 /*----------JULIA'S CSS------------*/
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 2rem;
+    grid-column-gap: 60px;
+    grid-row-gap: 25px;
+    position: relative;
+}
+
+
+.section_template{
+    font-family: 'Montserrat', sans-serif;
+    margin: 1rem;
+    padding: 2rem;
+    background-color: #F2EFBD;
+    border-radius: 1rem;
+}
