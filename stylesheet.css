@@ -260,4 +260,21 @@ position: absolute;
 
 /*----------LISA'S CSS-------------*/
 
+
+#map-contact  {
+    font-family: 'Montserrat', sans-serif;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    padding: 2rem;
+}
+
+.map {
+
+}
+
+
+
+
+
+
 /*----------JULIA'S CSS------------*/
