@@ -68,14 +68,16 @@
         <section id="animal-library"></section>
         <section id="map-contact"></section>
 
+
+        <div class="container"></div>
         <template>
-
-            <h2 class="animals_name">ANIMALS</h2>
-            <p class="amount">AMOUNT</p>
-            <p class="species">SPECIES</p>
-            <p class="cinomialname">BINOMIALNAME</p>
-            <p class="fact">FACT</p>
-
+            <section class="section_template">
+                <h2 class="animals_name">ANIMALS</h2>
+                <p class="amount">AMOUNT</p>
+                <p class="species">SPECIES</p>
+                <p class="cinomialname">BINOMIALNAME</p>
+                <p class="fact">FACT</p>
+            </section>
         </template>
     </main>
 
@@ -123,15 +125,17 @@
             const template = document.querySelector("template").content;
             const copy = template.cloneNode(true);
 
-            copy.querySelector(".animals_name").textContent = animals.gsx$name;
+            copy.querySelector(".animals_name").textContent = animals.gsx$name.$t;
 
-            copy.querySelector(".amount").textContent = animals.gsx$amount;
+            copy.querySelector(".amount").textContent = animals.gsx$amount.$t;
 
-            copy.querySelector(".species").textContent = animals.gsx$species;
+            copy.querySelector(".species").textContent = animals.gsx$species.$t;
 
-            copy.querySelector(".cinomialname").textContent = animals.gsx$binomialname;
+            copy.querySelector(".cinomialname").textContent = animals.gsx$binomialname.$t;
 
-            copy.querySelector(".fact").textContent = animals.gsx$fact;
+            copy.querySelector(".fact").textContent = animals.gsx$fact.$t;
+
+            document.querySelector(".container").appendChild(copy)
 
         }
 
