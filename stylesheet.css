@@ -210,16 +210,17 @@ body {
 /*-----------ZOE'S CSS--------------*/
 
 .footer {
-    background-color: #104573;
-    position: fixed;
-    box-sizing: border-box;
-    width: 100%;
-    text-align: left;
-    font: normal 16px sans-serif;
-    padding: 50px 50px;
-    position: fixed;
-    left: 0;
-    bottom: 0;
+
+  background-color: #104573;
+
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: normal 16px sans-serif;
+  padding: 50px 50px;
+  left: 0;
+  bottom: 0;
+
 }
 
 .footer-address {
@@ -239,9 +240,13 @@ body {
     text-decoration: none;
     color: white;
     font-size: 18px;
+
     font-weight: bold;
     color: #ffffff;
 
+
+  font-weight: bold;
+  color: #ffffff;
 
 }
 
