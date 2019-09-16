@@ -25,7 +25,7 @@ html {
 
 #landing {
     background-image: url("img/vectors/moon.svg");
-/*    background-size: cover;*/
+    /*    background-size: cover;*/
 }
 
 #landing img {
@@ -155,6 +155,8 @@ nav {
     transform: rotate(45deg) translate(-5px, -6px);
 }
 
+
+
 /*----------GRAEME'S CSS------------*/
 
 body {
@@ -165,48 +167,81 @@ body {
     margin-bottom: 1rem;
 }
 
-#event-info div {
-    margin: 1rem;
-    padding: 2rem;
-    background-color: #F2EFBD;
-    border-radius: 1rem;
-}
-
-.box1 {
-    align-self: center;
-}
-
-.box1 img {
-    max-width: 100%;
-    border-radius: 1rem;
-}
-
 #event-info {
     display: grid;
+    /*    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));*/
     grid-template-columns: 1rem 1fr 1fr 1rem;
     grid-template-areas:
-        ". box2 box3 ."
+        ". event_img_2 event_details ."
+        ". event_img_2 event_details ."
+        ". event_img_2 upcoming_events ."
+        ". event_img_2 opening_times .";
+    margin: 1rem;
+    padding: 2rem;
+    border-radius: 1rem;
 }
 
-.box1 {
-    grid-area: box1;
+.event_img {
+    grid-area: event_img;
 }
 
-.box2 {
-    grid-area: box2;
+.event_img > img {
+    width: 100%;
 }
 
-.box3 {
-    grid-area: box3;
-       font-family: 'Montserrat', sans-serif;
+.event_img_2 {
+    grid-area: event_img_2;
 }
 
-.box4 {
-    grid-area: box4;
+.event_img_2 > img {
+    width: 100%;
 }
 
+.event_details {
+    grid-area: event_details;
+    font-family: 'Montserrat', sans-serif;
+    color: yellow;
+    padding: 2rem;
+    margin: 1rem;
+    border: 1px solid yellow;
+    border-radius: 1rem;
+}
 
+.event_details > h1 {
+    color: deeppink;
+    text-transform: capitalize;
+}
 
+.upcoming_events {
+    grid-area: upcoming_events;
+    font-family: 'Montserrat', sans-serif;
+    color: yellow;
+    padding: 2rem;
+    margin: 1rem;
+    border-radius: 1rem;
+    border: 1px solid yellow;
+}
+
+.upcoming_events > h1 {
+    color: deeppink;
+    text-transform: capitalize;
+}
+
+.opening_times {
+    grid-area: opening_times;
+    color: yellow;
+    font-family: 'Montserrat', sans-serif;
+    padding: 2rem;
+    margin: 1rem;
+    border-radius: 1rem;
+     border: 1px solid yellow;
+}
+
+.opening_times > h1 {
+    color: deeppink;
+    text-transform: capitalize;
+}
+}
 
 
 /*-----------ZOE'S CSS--------------*/
@@ -218,7 +253,7 @@ body {
     box-sizing: border-box;
     width: 100%;
     text-align: left;
-       font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 
     padding: 50px 50px;
     left: 0;
@@ -263,16 +298,13 @@ body {
     grid-template-columns: 1rem 1fr 1fr 1rem;
     grid-template-areas:
         ". contact-grid map-grid ."
-
 }
 
 .map img {
-    /*    margin: 0;*/
     max-width: 100%;
 }
 
 .map {
-    /*    padding: 2rem;*/
     grid-area: map-grid;
 }
 
@@ -282,7 +314,7 @@ body {
     padding: 2rem;
     background-color: #F2EFBD;
     border-radius: 1rem;
-       font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 
