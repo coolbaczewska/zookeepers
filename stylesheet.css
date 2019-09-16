@@ -24,10 +24,8 @@ html {
 /*--------CHARLOTTE's CSS----------'*/
 
 #landing {
-    width: 100vw;
-    height: 100vh;
     background-image: url("img/vectors/moon.svg");
-    background-size: cover;
+/*    background-size: cover;*/
 }
 
 #landing img {
@@ -39,7 +37,6 @@ html {
     display: block;
     width: 40px;
     /*    height: 40px;*/
-
 }
 
 /*---NAV---*/
