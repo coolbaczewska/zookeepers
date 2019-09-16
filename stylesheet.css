@@ -26,8 +26,12 @@ html {
 #landing {
     width: 100vw;
     height: 100vh;
-    background-image: url("dummypic.jpg");
+    background-image: url("img/moon.jpg");
     background-size: cover;
+}
+
+#landing img {
+    width: 100vw;
 }
 
 .logo h4::after {
@@ -211,15 +215,15 @@ body {
 
 .footer {
 
-  background-color: #104573;
+    background-color: #104573;
 
-  box-sizing: border-box;
-  width: 100%;
-  text-align: left;
-  font: normal 16px sans-serif;
-  padding: 50px 50px;
-  left: 0;
-  bottom: 0;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: normal 16px sans-serif;
+    padding: 50px 50px;
+    left: 0;
+    bottom: 0;
 
 }
 
@@ -245,8 +249,8 @@ body {
     color: #ffffff;
 
 
-  font-weight: bold;
-  color: #ffffff;
+    font-weight: bold;
+    color: #ffffff;
 
 }
 
@@ -263,12 +267,12 @@ body {
 }
 
 .map img {
-/*    margin: 0;*/
+    /*    margin: 0;*/
     max-width: 100%;
 }
 
 .map {
-/*    padding: 2rem;*/
+    /*    padding: 2rem;*/
     grid-area: map-grid;
 }
 
@@ -295,7 +299,7 @@ body {
 }
 
 
-.section_template{
+.section_template {
     font-family: 'Montserrat', sans-serif;
     margin: 1rem;
     padding: 2rem;
