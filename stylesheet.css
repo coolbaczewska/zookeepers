@@ -201,6 +201,7 @@ body {
 
 .box3 {
     grid-area: box3;
+       font-family: 'Montserrat', sans-serif;
 }
 
 .box4 {
@@ -220,7 +221,8 @@ body {
     box-sizing: border-box;
     width: 100%;
     text-align: left;
-    font: normal 16px sans-serif;
+       font-family: 'Montserrat', sans-serif;
+
     padding: 50px 50px;
     left: 0;
     bottom: 0;
@@ -264,6 +266,7 @@ body {
     grid-template-columns: 1rem 1fr 1fr 1rem;
     grid-template-areas:
         ". contact-grid map-grid ."
+
 }
 
 .map img {
@@ -282,6 +285,7 @@ body {
     padding: 2rem;
     background-color: #F2EFBD;
     border-radius: 1rem;
+       font-family: 'Montserrat', sans-serif;
 }
 
 
