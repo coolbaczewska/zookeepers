@@ -18,7 +18,7 @@ font-style: normal;
 
 html {
     box-sizing: border-box;
-        scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 
@@ -180,64 +180,40 @@ body {
 }
 
 #event-info h1 {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 #event-info {
     display: grid;
     /*    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));*/
-    grid-template-columns: 1rem 1fr 1fr 1rem;
+    grid-template-columns: 1rem 1fr 1fr 1fr 1rem;
     grid-template-areas:
-        ". event_img_2 event_details ."
-        ". event_img_2 event_details ."
-        ". event_img_2 upcoming_events ."
-        ". event_img_2 opening_times .";
-    margin: 1rem;
+        ". event_details upcoming_events opening_times ."
+        ". contact-grid contact-grid map-grid .";
     padding: 2rem;
     border-radius: 1rem;
     color: white;
 }
 
-.event_img {
-    grid-area: event_img;
-}
-
-.event_img > img {
-    width: 100%;
-}
-
-.event_img_2 {
-    grid-area: event_img_2;
-}
-
-.event_img_2 > img {
-    width: 100%;
-}
-
 .event_details {
     grid-area: event_details;
     font-family: 'Montserrat', sans-serif;
-    color: yellow;
+    color: white;
     padding: 2rem;
     margin: 1rem;
     border: 1px solid yellow;
     border-radius: 1rem;
 }
 
-
 .event_details > h1 {
     color: deeppink;
     text-transform: capitalize;
-
-.box3 {
-    grid-area: box3;
-
 }
 
 .upcoming_events {
     grid-area: upcoming_events;
     font-family: 'Montserrat', sans-serif;
-    color: yellow;
+    color: white;
     padding: 2rem;
     margin: 1rem;
     border-radius: 1rem;
@@ -251,12 +227,12 @@ body {
 
 .opening_times {
     grid-area: opening_times;
-    color: yellow;
+    color: white;
     font-family: 'Montserrat', sans-serif;
     padding: 2rem;
     margin: 1rem;
     border-radius: 1rem;
-     border: 1px solid yellow;
+    border: 1px solid yellow;
 }
 
 .opening_times > h1 {
@@ -316,10 +292,11 @@ body {
 
 #map-contact {
     display: grid;
-    /*        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));*/
+/*            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));*/
     grid-template-columns: 1rem 1fr 1fr 1rem;
     grid-template-areas:
-        ". contact-grid map-grid ."
+        ". contact-grid map-grid .";
+        margin: 2rem;
 }
 
 .map img {
@@ -332,12 +309,17 @@ body {
 
 .contact {
     grid-area: contact-grid;
-    margin: 1rem;
+    background-color: #202C42;
+    color: white;
+/*border: 1px solid yellow;*/
     padding: 2rem;
-    background-color: background-color: #202C42;
-    ;
-    border-radius: 1rem;
+    margin: 1rem;
     font-family: 'Montserrat', sans-serif;
+}
+
+.contact h1 {
+    color: deeppink;
+    margin-bottom: 0.5rem;
 }
 
 
@@ -347,7 +329,7 @@ body {
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     padding: 2rem;
     grid-column-gap: 60px;
     grid-row-gap: 25px;
@@ -357,8 +339,15 @@ body {
 
 .section_template {
     font-family: 'Montserrat', sans-serif;
+/*
     margin: 1rem;
     padding: 2rem;
     background-color: #F2EFBD;
     border-radius: 1rem;
+*/
+
+    background-color: #202C42;
+    color: white;
+    padding: 2rem;
+    margin: 1rem;
 }
