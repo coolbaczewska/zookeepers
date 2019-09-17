@@ -34,30 +34,10 @@ html {
     width: 100vw;
 }
 
-.logo h4::after {
-    content: url(paw.svg);
-    display: block;
-    width: 40px;
-    /*    height: 40px;*/
 
-}
 
-.parallax-window {
-    min-height: 100vh;
-    background: transparent;
-    position: absolute;
-    left: 0vw;
-    top: 0vh;
-}
 
-.toplayer {
-    position: absolute;
-    width: 100vw;
-    height 100vh;
-    left: 0vw;
-    top: 0vh;
 
-}
 
 /*---NAV---*/
 
