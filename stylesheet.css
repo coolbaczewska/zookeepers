@@ -18,7 +18,9 @@ font-style: normal;
 
 html {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
+
 
 
 /*--------CHARLOTTE's CSS----------'*/
