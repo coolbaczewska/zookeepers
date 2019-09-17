@@ -18,7 +18,9 @@ font-style: normal;
 
 html {
     box-sizing: border-box;
+        scroll-behavior: smooth;
 }
+
 
 
 /*--------CHARLOTTE's CSS----------'*/
@@ -174,7 +176,7 @@ nav {
 /*----------GRAEME'S CSS------------*/
 
 body {
-    background-color: #012340;
+    background-color: #161F30;
 }
 
 #event-info h1 {
@@ -193,6 +195,7 @@ body {
     margin: 1rem;
     padding: 2rem;
     border-radius: 1rem;
+    color: white;
 }
 
 .event_img {
@@ -221,9 +224,14 @@ body {
     border-radius: 1rem;
 }
 
+
 .event_details > h1 {
     color: deeppink;
     text-transform: capitalize;
+
+.box3 {
+    grid-area: box3;
+
 }
 
 .upcoming_events {
@@ -326,7 +334,8 @@ body {
     grid-area: contact-grid;
     margin: 1rem;
     padding: 2rem;
-    background-color: #F2EFBD;
+    background-color: background-color: #202C42;
+    ;
     border-radius: 1rem;
     font-family: 'Montserrat', sans-serif;
 }
