@@ -78,17 +78,52 @@
             </section>
         </section>
 
+<!--
         <section id="animal-library"></section>
         <div class="container"></div>
+-->
+
+        <section class="sort">
+
+            <button class="btn-mammal">Mammal</button>
+            <button class="btn-bird">Bird</button>
+            <button class="btn-reptile">Reptile</button>
+            <button class="btn-fish">Fish</button>
+            <button class="btn-crustacean">Crustacean</button>
+
+        </section>
+
+        <div class="container"></div>
+
         <template>
-            <section class="section_template">
-                <h2 class="animals_name">ANIMALS</h2>
-                <p class="amount">AMOUNT</p>
-                <p class="species">SPECIES</p>
-                <p class="cinomialname">BINOMIALNAME</p>
-                <p class="fact">FACT</p>
-            </section>
+
+            <div class="animal">
+                <section class="section_template">
+
+                    <h2 class="animals_name">ANIMALS</h2>
+                    <p class="amount">AMOUNT</p>
+                    <p class="species">SPECIES</p>
+                    <p class="cinomialname">BINOMIALNAME</p>
+                    <p class="fact">FACT</p>
+                    <img class="data_image">
+
+                </section>
+            </div>
+
         </template>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         <section id="map-contact">
 
@@ -152,7 +187,7 @@
 
 
     <script>
-        function getAnimals() {
+         function getAnimals() {
             fetch("https://spreadsheets.google.com/feeds/list/15BNyxAmWzCBtgEIRHl7o0pHE6SdWg_UgOkOkzBEUzxQ/od6/public/values?alt=json")
                 .then(function(response) {
                     return response.json()
@@ -161,14 +196,40 @@
                     data.feed.entry.forEach(showAnimals)
                 })
         }
-        getAnimals()
+        getAnimals();
+
+        function filterAnimals(e) {
+            const clickedEl = e.target.innerHTML;
+            console.log(clickedEl);
+            document.querySelectorAll('.animal').forEach(hideAnimals);
+            document.querySelectorAll('.' + clickedEl).forEach(showCategoryOfAnimals);
+        }
+
+        function showCategoryOfAnimals(animalElement) {
+            animalElement.classList.remove('hidden');
+            console.log('hey' + animalElement)
+        }
+
+
+        function hideAnimals(animalElement) {
+            animalElement.classList.add('hidden');
+            //console.log(animalElement)
+        }
+
+        function addListeners(btn) {
+            btn.addEventListener('click', filterAnimals);
+        }
+
+        document.querySelectorAll('button').forEach(addListeners);
 
         function showAnimals(animals) {
-            console.log(animals);
+            //console.log(animals);
 
 
             const template = document.querySelector("template").content;
             const copy = template.cloneNode(true);
+
+            copy.querySelector(".animal").classList.add(animals.gsx$species.$t);
 
             copy.querySelector(".animals_name").textContent = animals.gsx$name.$t;
 
@@ -180,7 +241,14 @@
 
             copy.querySelector(".fact").textContent = animals.gsx$fact.$t;
 
+console.log(animals.gsx$images.$t);
+
+            //copy.querySelector(".data_image").src = ``
+
             document.querySelector(".container").appendChild(copy)
+
+
+
 
         }
 
