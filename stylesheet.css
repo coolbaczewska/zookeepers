@@ -163,7 +163,7 @@ nav {
 /*----------GRAEME'S CSS------------*/
 
 body {
-    background-color: #012340;
+    background-color: #161F30;
 }
 
 #event-info h1 {
@@ -173,8 +173,9 @@ body {
 #event-info div {
     margin: 1rem;
     padding: 2rem;
-    background-color: #F2EFBD;
+    background-color: #202C42;
     border-radius: 1rem;
+    color: white;
 }
 
 .box1 {
@@ -203,7 +204,7 @@ body {
 
 .box3 {
     grid-area: box3;
-       font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .box4 {
@@ -223,7 +224,7 @@ body {
     box-sizing: border-box;
     width: 100%;
     text-align: left;
-       font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 
     padding: 50px 50px;
     left: 0;
@@ -285,9 +286,11 @@ body {
     grid-area: contact-grid;
     margin: 1rem;
     padding: 2rem;
-    background-color: #F2EFBD;
+    background-color: background-color: #202C42;
+    ;
     border-radius: 1rem;
-       font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
 }
 
 
