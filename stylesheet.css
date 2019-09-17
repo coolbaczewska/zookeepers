@@ -247,12 +247,10 @@ body {
 .footer {
 
     background-color: #104573;
-
     box-sizing: border-box;
     width: 100%;
     text-align: left;
     font-family: 'Montserrat', sans-serif;
-
     padding: 50px 50px;
     left: 0;
     bottom: 0;
@@ -260,31 +258,34 @@ body {
 }
 
 .footer-address {
+    padding:2rem;
     font-size: 18px;
     font-weight: bold;
     color: #ffffff;
     color: white;
     position: absolute;
+      font-family: 'Montserrat', sans-serif;
 
 }
 
 .footer-right a {
+    padding:2rem;
     display: inline;
     padding-right: 30px;
     float: right;
     max-width: 300px;
     text-decoration: none;
     color: white;
-    font-size: 18px;
-
+    font-size: 16px;
     font-weight: bold;
     color: #ffffff;
-
-
     font-weight: bold;
     color: #ffffff;
-
+      font-family: 'Montserrat', sans-serif;
 }
+
+
+
 
 
 /*----------LISA'S CSS-------------*/
