@@ -26,22 +26,25 @@ html {
 /*--------CHARLOTTE's CSS----------'*/
 
 #landing {
-    width: 100vw;
-    height: 100vh;
     background-image: url("img/vectors/moon.svg");
-    background-size: cover;
+    /*    background-size: cover;*/
 }
 
 #landing img {
     width: 100vw;
 }
 
+/*
 .logo h4::after {
     content: url(paw.svg);
     display: block;
     width: 40px;
-    /*    height: 40px;*/
+        height: 40px;
+}
+*/
 
+nav h4 {
+    color: hotpink;
 }
 
 /*---NAV---*/
@@ -55,6 +58,7 @@ nav {
     font-family: 'Montserrat', sans-serif;
 }
 
+/*
 .logo {
     font-family: chaloops, sans-serif;
     color: #F2EFBD;
@@ -62,6 +66,13 @@ nav {
     letter-spacing: 3px;
     font-size: 30px;
 }
+*/
+
+/*
+.logo {
+    width: 3px;
+}
+*/
 
 .nav-links {
     display: flex;
@@ -160,6 +171,8 @@ nav {
     transform: rotate(45deg) translate(-5px, -6px);
 }
 
+
+
 /*----------GRAEME'S CSS------------*/
 
 body {
@@ -170,49 +183,87 @@ body {
     margin-bottom: 1rem;
 }
 
-#event-info div {
+#event-info {
+    display: grid;
+    /*    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));*/
+    grid-template-columns: 1rem 1fr 1fr 1rem;
+    grid-template-areas:
+        ". event_img_2 event_details ."
+        ". event_img_2 event_details ."
+        ". event_img_2 upcoming_events ."
+        ". event_img_2 opening_times .";
     margin: 1rem;
     padding: 2rem;
-    background-color: #202C42;
     border-radius: 1rem;
     color: white;
 }
 
-.box1 {
-    align-self: center;
+.event_img {
+    grid-area: event_img;
 }
 
-.box1 img {
-    max-width: 100%;
+.event_img > img {
+    width: 100%;
+}
+
+.event_img_2 {
+    grid-area: event_img_2;
+}
+
+.event_img_2 > img {
+    width: 100%;
+}
+
+.event_details {
+    grid-area: event_details;
+    font-family: 'Montserrat', sans-serif;
+    color: yellow;
+    padding: 2rem;
+    margin: 1rem;
+    border: 1px solid yellow;
     border-radius: 1rem;
 }
 
-#event-info {
-    display: grid;
-    grid-template-columns: 1rem 1fr 1fr 1rem;
-    grid-template-areas:
-        ". box2 box3 ."
-}
 
-.box1 {
-    grid-area: box1;
-}
-
-.box2 {
-    grid-area: box2;
-}
+.event_details > h1 {
+    color: deeppink;
+    text-transform: capitalize;
 
 .box3 {
     grid-area: box3;
+
+}
+
+.upcoming_events {
+    grid-area: upcoming_events;
     font-family: 'Montserrat', sans-serif;
+    color: yellow;
+    padding: 2rem;
+    margin: 1rem;
+    border-radius: 1rem;
+    border: 1px solid yellow;
 }
 
-.box4 {
-    grid-area: box4;
+.upcoming_events > h1 {
+    color: deeppink;
+    text-transform: capitalize;
 }
 
+.opening_times {
+    grid-area: opening_times;
+    color: yellow;
+    font-family: 'Montserrat', sans-serif;
+    padding: 2rem;
+    margin: 1rem;
+    border-radius: 1rem;
+     border: 1px solid yellow;
+}
 
-
+.opening_times > h1 {
+    color: deeppink;
+    text-transform: capitalize;
+}
+}
 
 
 /*-----------ZOE'S CSS--------------*/
@@ -269,16 +320,13 @@ body {
     grid-template-columns: 1rem 1fr 1fr 1rem;
     grid-template-areas:
         ". contact-grid map-grid ."
-
 }
 
 .map img {
-    /*    margin: 0;*/
     max-width: 100%;
 }
 
 .map {
-    /*    padding: 2rem;*/
     grid-area: map-grid;
 }
 
@@ -290,7 +338,6 @@ body {
     ;
     border-radius: 1rem;
     font-family: 'Montserrat', sans-serif;
-    color: white;
 }
 
 
