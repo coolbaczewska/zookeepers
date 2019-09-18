@@ -338,7 +338,7 @@ a:hover {
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     padding: 2rem;
     grid-column-gap: 60px;
     grid-row-gap: 25px;
@@ -363,4 +363,17 @@ a:hover {
 
 .hidden{
     display: none;
+}
+
+button{
+    background-color: deeppink;
+  border: 2px solid yellow;
+    border-radius: 1rem;
+  color: white;
+  padding: 15px 32px;
+    font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+    margin: 5px;
 }
