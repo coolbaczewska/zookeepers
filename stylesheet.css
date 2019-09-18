@@ -251,14 +251,14 @@ body {
     width: 100%;
     text-align: left;
     font-family: 'Montserrat', sans-serif;
-    padding: 50px 50px;
+    padding:50px 50px;
     left: 0;
     bottom: 0;
 
 }
 
 .footer-address {
-    padding:2rem;
+
     font-size: 18px;
     font-weight: bold;
     color: #ffffff;
@@ -268,25 +268,34 @@ body {
 
 }
 
-.footer-right a {
-    padding:2rem;
-    display: inline;
-    padding-right: 30px;
+.footer-right {
+    display: flex;
+   justify-content: space-around;
     float: right;
-    max-width: 300px;
-    text-decoration: none;
     color: white;
     font-size: 16px;
     font-weight: bold;
     color: #ffffff;
-    font-weight: bold;
-    color: #ffffff;
       font-family: 'Montserrat', sans-serif;
+    list-style: none;
 }
 
+a { color: white;
+justify-content: space-around;
+padding-left: 50px;
+text-decoration: none;}
 
+a:hover {
+  color: deeppink;
+}
 
+@media screen and (max-width: 600px) {
+  .footer {
 
+    visibility: hidden;
+    display: none;
+  }
+}
 
 /*----------LISA'S CSS-------------*/
 
@@ -311,6 +320,7 @@ body {
 .contact {
     grid-area: contact-grid;
     background-color: var(--tertiary-color);
+    font-family: var(--body-font);
     color: white;
     padding: 2rem;
     margin: 1rem;
