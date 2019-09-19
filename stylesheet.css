@@ -1,19 +1,28 @@
 /*----------GENERAL STYLING------------*/
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,900&display=swap');
 /*font-family: 'Montserrat', sans-serif;*/
 
 @import url("https://use.typekit.net/ebq7sgz.css");
 
-/*
-font-family: chaloops, sans-serif;
-font-weight: 400;
-font-style: normal;
-*/
+/*Setup CSS variables*/
+:root {
+    --main-color: deeppink;
+    --secondary-color: #FCCA46;
+    --tertiary-color: #202C42;
+    --body-font: 'Montserrat', sans-serif;
+    --header-font: 'Montserrat', sans-serif;
+}
 
 * {
     margin: 0;
     padding: 0;
+}
+
+/*Max width wrapper*/
+.wrapper {
+    max-width: 1200px;
+    margin: auto;
 }
 
 html {
@@ -21,30 +30,37 @@ html {
     scroll-behavior: smooth;
 }
 
+p {
+    line-height: 1.5rem;
+}
+
+hr {
+    border: solid 2px #FCCA46;
+    width: 100%;
+    height: 2px;
+    margin: 1rem;
+    background-color: var(--secondary-color);
+    border: 0 none;
+}
+
+h1 {
+    font-family: var(--header-font);
+    font-weight: 900;
+    margin-bottom: 1rem;
+    color: var(--main-color);
+    text-align: center;
+}
+
 
 
 /*--------CHARLOTTE's CSS----------'*/
 
-#landing {
-    background-image: url("img/vectors/moon.svg");
-    /*    background-size: cover;*/
-}
-
-#landing img {
-    width: 100vw;
-}
-
-/*
-.logo h4::after {
-    content: url(paw.svg);
-    display: block;
-    width: 40px;
-        height: 40px;
-}
-*/
-
 nav h4 {
-    color: hotpink;
+    color: deeppink;
+}
+
+#landing {
+    margin-bottom: 1em;
 }
 
 /*---NAV---*/
@@ -58,21 +74,6 @@ nav {
     font-family: 'Montserrat', sans-serif;
 }
 
-/*
-.logo {
-    font-family: chaloops, sans-serif;
-    color: #F2EFBD;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-size: 30px;
-}
-*/
-
-/*
-.logo {
-    width: 3px;
-}
-*/
 
 .nav-links {
     display: flex;
@@ -171,6 +172,85 @@ nav {
     transform: rotate(45deg) translate(-5px, -6px);
 }
 
+/*-----PARALLAX STYLING-----*/
+
+
+        #first {
+            background: url(img/vectors/bg-moon.svg);
+            color: white;
+            height: 720px;
+            margin: 0 auto;
+            overflow: hidden;
+            padding: 0;
+            background-position: bottom !important;
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        #first .bg {
+            background: url(img/vectors/overlay.svg);
+            height: 720px;
+            margin: 0 auto;
+            padding: 0;
+            width: 100%;
+            z-index: 200;
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        #third {
+            background: #202C42;
+            color: white;
+            height: 0px;
+
+        }
+
+
+/*-----MEDIA QUERIES FOR PARALLAX-----*/
+
+@media only screen and (min-width:1250px) {
+
+
+
+}
+
+@media only screen and (min-width: 700px) and (max-width:1250px) {
+
+    .hide-parallax {
+        display: none;
+    }
+
+    #landing {
+        width: 100vw;
+        height:100vh;
+        background-image: url(img/vectors/bg-tablet.svg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+}
+
+
+@media only screen and (max-width:700px) {
+
+    .hide-parallax {
+        display: none;
+    }
+
+    #landing {
+        width: 100vw;
+        height:100vh;
+        background-image: url(img/vectors/bg-mobile.svg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+
+}
+
+
 
 
 /*----------GRAEME'S CSS------------*/
@@ -179,9 +259,6 @@ body {
     background-color: #161F30;
 }
 
-#event-info h1 {
-    margin-bottom: 0.5rem;
-}
 
 #event-info {
     display: grid;
@@ -195,50 +272,46 @@ body {
     color: white;
 }
 
+/*For mobile - event section*/
+@media only screen and (max-width:768px) {
+    #event-info {
+    display: grid;
+    grid-template-columns: 1rem 1fr 1rem;
+    grid-template-areas:
+        ". event_details ."
+        ". upcoming_events ."
+        ". opening_times .";
+    padding: 2rem;
+    border-radius: 1rem;
+    color: white;
+}
+}
+
 .event_details {
     grid-area: event_details;
+    background-color: var(--tertiary-color);
     font-family: 'Montserrat', sans-serif;
     color: white;
     padding: 2rem;
     margin: 1rem;
-    border: 1px solid yellow;
-    border-radius: 1rem;
-}
-
-.event_details > h1 {
-    color: deeppink;
-    text-transform: capitalize;
 }
 
 .upcoming_events {
     grid-area: upcoming_events;
+    background-color: var(--tertiary-color);
     font-family: 'Montserrat', sans-serif;
     color: white;
     padding: 2rem;
     margin: 1rem;
-    border-radius: 1rem;
-    border: 1px solid yellow;
-}
-
-.upcoming_events > h1 {
-    color: deeppink;
-    text-transform: capitalize;
 }
 
 .opening_times {
     grid-area: opening_times;
+    background-color: var(--tertiary-color);
     color: white;
     font-family: 'Montserrat', sans-serif;
     padding: 2rem;
     margin: 1rem;
-    border-radius: 1rem;
-    border: 1px solid yellow;
-}
-
-.opening_times > h1 {
-    color: deeppink;
-    text-transform: capitalize;
-}
 }
 
 
@@ -247,45 +320,55 @@ body {
 .footer {
 
     background-color: #104573;
-
     box-sizing: border-box;
     width: 100%;
     text-align: left;
     font-family: 'Montserrat', sans-serif;
-
-    padding: 50px 50px;
+    padding:50px 50px;
     left: 0;
     bottom: 0;
 
 }
 
 .footer-address {
+
     font-size: 18px;
     font-weight: bold;
     color: #ffffff;
     color: white;
     position: absolute;
+      font-family: 'Montserrat', sans-serif;
 
 }
 
-.footer-right a {
-    display: inline;
-    padding-right: 30px;
+.footer-right {
+    display: flex;
+   justify-content: space-around;
     float: right;
-    max-width: 300px;
-    text-decoration: none;
     color: white;
-    font-size: 18px;
-
+    font-size: 16px;
     font-weight: bold;
     color: #ffffff;
-
-
-    font-weight: bold;
-    color: #ffffff;
-
+      font-family: 'Montserrat', sans-serif;
+    list-style: none;
 }
 
+a { color: white;
+justify-content: space-around;
+padding-left: 50px;
+text-decoration: none;}
+
+a:hover {
+  color: deeppink;
+}
+
+@media screen and (max-width: 1000px) {
+  .footer {
+
+    visibility: hidden;
+    display: none;
+  }
+}
 
 /*----------LISA'S CSS-------------*/
 
@@ -299,6 +382,20 @@ body {
         margin: 2rem;
 }
 
+/*For mobile - map section*/
+@media only screen and (max-width:768px) {
+    #map-contact {
+    display: grid;
+    grid-template-columns: 1rem 1fr 1rem;
+    grid-template-areas:
+        ". contact-grid ."
+        ". map-grid .";
+    padding: 2rem;
+    border-radius: 1rem;
+    color: white;
+}
+}
+
 .map img {
     max-width: 100%;
 }
@@ -309,23 +406,33 @@ body {
 
 .contact {
     grid-area: contact-grid;
-    background-color: #202C42;
+    background-color: var(--tertiary-color);
+    font-family: var(--body-font);
     color: white;
-/*border: 1px solid yellow;*/
     padding: 2rem;
     margin: 1rem;
-    font-family: 'Montserrat', sans-serif;
 }
 
 .contact h1 {
     color: deeppink;
     margin-bottom: 0.5rem;
+
 }
 
 
 
 
 /*----------JULIA'S CSS------------*/
+
+.sort {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin: 3rem;
+}
+
+.sort > h1 {
+    grid-column: 1/-1;
+}
 
 .container {
     display: grid;
@@ -357,8 +464,9 @@ body {
 }
 
 button{
-    background-color: deeppink;
-  border: 2px solid yellow;
+/*    background-color: deeppink;*/
+    background-color: var(--tertiary-color);
+  border: 1px solid yellow;
     border-radius: 1rem;
   color: white;
   padding: 15px 32px;

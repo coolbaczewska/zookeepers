@@ -5,9 +5,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheet.css">
-
-
     <title>Copenhagen Zoo | After Dark</title>
+
+    <!--    PARALLAX-->
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ianlunn.co.uk/plugins/jquery-parallax/scripts/jquery.parallax-1.1.3.js"></script>
+    <script type="text/javascript" src="https://ianlunn.co.uk/plugins/jquery-parallax/scripts/jquery.localscroll-1.2.7-min.js"></script>
+    <script type="text/javascript" src="https://ianlunn.co.uk/plugins/jquery-parallax/scripts/jquery.scrollTo-1.4.2-min.js"></script>
+
 
 
 </head>
@@ -24,9 +30,9 @@
             <!--            <img class="paw icon" src="paw.svg">-->
 
             <ul class="nav-links">
-                <li><a href="#event-info">EVENT</a></li>
-                <li><a href="#animal-library">ANIMALS</a></li>
-                <li><a href="#map-contact">INFORMATION</a></li>
+                <li><a href="#event">EVENT</a></li>
+                <li><a href="#animals">ANIMALS</a></li>
+                <li><a href="#information">INFORMATION</a></li>
             </ul>
 
             <div class="burger">
@@ -42,9 +48,24 @@
 
     <main>
         <section id="landing">
-            <img src="img/vectors/zoo_hero_five.svg">
+
+
+            <div class="hide-parallax">
+                <!-- begin bottom layer -->
+                <div id="first">
+                    <div class="bg"></div>
+                </div> <!-- end bottom layer -->
+
+                <!-- begin top layer -->
+                <div id="third"></div> <!-- end top layer -->
+            </div>
+
         </section>
 
+
+        <a name="event">
+            <h1>EVENT</h1>
+        </a>
 
 
         <section id="event-info">
@@ -78,20 +99,18 @@
             </section>
         </section>
 
-        <!--
+      
+      
+
         <section id="animal-library"></section>
         <div class="container"></div>
--->
 
-        <section class="sort">
 
-            <button class="btn-mammal">Mammal</button>
-            <button class="btn-bird">Bird</button>
-            <button class="btn-reptile">Reptile</button>
-            <button class="btn-fish">Fish</button>
-            <button class="btn-crustacean">Crustacean</button>
 
-        </section>
+        <hr>
+
+
+
 
 
 
@@ -103,12 +122,34 @@
             <button class="btn-time" data-time="22:00-23:00">22:00-23:00</button>
             <button class="btn-time" data-time="00:00-00:45">00:00-00:45</button>
 
-        </section>
 
 
 
 
+        <section id="animal-library"></section>
+        <a name="animals">
+            <h1>ANIMALS</h1>
 
+            <section class="sort">
+                <h1>Species</h1>
+                <button class="btn-mammal">Mammal</button>
+                <button class="btn-bird">Bird</button>
+                <button class="btn-reptile">Reptile</button>
+                <button class="btn-fish">Fish</button>
+                <button class="btn-crustacean">Crustacean</button>
+            </section>
+
+            <section class="sort">
+                <h1>Times</h1>
+                <button>19:00-19:45</button>
+                <button>20:00-21:00</button>
+                <button>21:00-22:00</button>
+                <button>22:00-23:00</button>
+                <button>00:00-00:45</button>
+            </section>
+
+        </a>
+        <div class="container"></div>
 
         <div class="container">
 
@@ -116,6 +157,7 @@
 
                 <div class="animal">
                     <section class="section_template">
+
 
                         <h2 class="animals_name">ANIMALS</h2>
                         <p class="amount">AMOUNT</p>
@@ -131,14 +173,33 @@
         </div>
 
 
+        <div class="container">
+
+            <template>
+
+                <div class="animal">
+                    <section class="section_template">
+
+                        <h2 class="animals_name">ANIMALS</h2>
+                        <p class="amount">AMOUNT</p>
+                        <p class="species">SPECIES</p>
+                        <p class="cinomialname">BINOMIALNAME</p>
+                        <p class="fact">FACT</p>
+                        <img class="data_image">
+                        <button class="modal_button">Details</button>
+                    </section>
+                </div>
+
+            </template>
+        </div>
 
 
+        <hr>
 
 
-
-
-
-
+        <a name="information">
+            <h1>INFORMATION</h1>
+        </a>
         <section id="map-contact">
 
 
@@ -159,14 +220,12 @@
                 <p>zoo@zoo.dk</p>
 
                 <br>
-                <h1>Reception</h1>
+                <h1>Adminstration</h1>
                 <p>Guests for the adminstration should visit Søndre Fasanvej 79 2000 Frederiksberg.</p>
                 <br>
                 <h1>Questions about animals</h1>
                 <p> You are very welcome to contact us with any questions by e-mailing zoo@zoo.dk. We try to respond within 14 days. You can also follow us on Facebook, twitter and instagram for more information. Check out our animal library for more information about nocturnal animal events.</p>
             </div>
-
-
 
         </section>
 
@@ -181,14 +240,15 @@
 
         <p class="footer-address">
             Zoologisk Have, Roskildevej 32, 2000 Frederiksberg
+
         </p>
 
+        <ul class="footer-right">
+            <li><a href="#event-info">EVENT </a></li>
+            <li><a href="#animal-library">ANIMAL INFO</a></li>
+            <li><a href="#map-contact">VISIT US</a></li>
+        </ul>
 
-        <p class="footer-right">
-            <a href="#">Animals</a>
-            <a href="#">Event</a>
-            <a href="#">Contact</a>
-        </p>
 
 
     </footer>
@@ -334,8 +394,22 @@
         }
 
         navSlide();
-
     </script>
-</body>
 
+    <!------PARALLAX------->
+
+
+    <script>
+        $(document).ready(function() {
+            $('#nav').localScroll(800);
+            $('#intro').parallax("50%", 0.1);
+            $('#second').parallax("50%", 0.1);
+            $('.bg').parallax("50%", 0.4);
+            $('#third').parallax("50%", .8);
+
+        })
+    </script>
+
+
+</body>
 </html>
