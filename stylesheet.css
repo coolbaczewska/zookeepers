@@ -57,14 +57,7 @@ h1 {
     width: 100vw;
 }
 
-/*
-.logo h4::after {
-    content: url(paw.svg);
-    display: block;
-    width: 40px;
-        height: 40px;
-}
-*/
+
 
 nav h4 {
     color: hotpink;
@@ -193,6 +186,40 @@ nav {
 .toggle .line3 {
     transform: rotate(45deg) translate(-5px, -6px);
 }
+
+/*-----PARALLAX STYLING-----*/
+
+
+        #first {
+            background: url(img/vectors/moon-surface.svg);
+            color: white;
+            height: 720px;
+            margin: 0 auto;
+            overflow: hidden;
+            padding: 0;
+            background-position: bottom !important;
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        #first .bg {
+            background: url(img/vectors/zoo_hero_five.svg);
+            height: 720px;
+            margin: 0 auto;
+            padding: 0;
+            width: 100%;
+            z-index: 200;
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        #third {
+            background: #fff;
+            color: white;
+            height: 650px;
+            padding: 100px 0 0 0;
+        }
+
 
 
 
