@@ -48,19 +48,6 @@ h1 {
 
 /*--------CHARLOTTE's CSS----------'*/
 
-/*
-#landing {
-    background-image: url("img/vectors/moon.svg");
-        background-size: cover;
-}
-
-#landing img {
-    width: 100vw;
-}
-*/
-
-
-
 nav h4 {
     color: deeppink;
 }
@@ -216,11 +203,56 @@ nav {
         }
 
         #third {
-            background: #fff;
+            background: #202C42;
             color: white;
-            height: 650px;
-            padding: 100px 0 0 0;
+            height: 0px;
+
         }
+
+
+/*-----MEDIA QUERIES FOR PARALLAX-----*/
+
+@media only screen and (min-width:1250px) {
+
+
+
+}
+
+@media only screen and (min-width: 700px) and (max-width:1250px) {
+
+    .hide-parallax {
+        display: none;
+    }
+
+    #landing {
+        width: 100vw;
+        height:100vh;
+        background-image: url(img/vectors/background-fallback.svg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+}
+
+
+@media only screen and (max-width:700px) {
+
+    .hide-parallax {
+        display: none;
+    }
+
+    #landing {
+        width: 100vw;
+        height:100vh;
+        background-image: url(img/vectors/background-fallback-mobile.svg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+
+}
 
 
 
