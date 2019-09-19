@@ -235,7 +235,7 @@ nav {
     #landing {
         width: 100vw;
         height:100vh;
-        background-image: url(img/vectors/background-fallback-mobile.svg);
+        background-image: url(img/vectors/background-mobile.svg);
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
