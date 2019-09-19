@@ -42,6 +42,7 @@ h1 {
     font-weight: 900;
     margin-bottom: 1rem;
     color: var(--main-color);
+    text-align: center;
 }
 
 
@@ -50,6 +51,10 @@ h1 {
 
 nav h4 {
     color: deeppink;
+}
+
+#landing {
+    margin-bottom: 1em;
 }
 
 /*---NAV---*/
@@ -63,21 +68,6 @@ nav {
     font-family: 'Montserrat', sans-serif;
 }
 
-/*
-.logo {
-    font-family: chaloops, sans-serif;
-    color: #F2EFBD;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-size: 30px;
-}
-*/
-
-/*
-.logo {
-    width: 3px;
-}
-*/
 
 .nav-links {
     display: flex;
@@ -390,6 +380,7 @@ a:hover {
 .contact h1 {
     color: deeppink;
     margin-bottom: 0.5rem;
+
 }
 
 
