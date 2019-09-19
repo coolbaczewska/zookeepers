@@ -99,6 +99,13 @@
             </section>
         </section>
 
+      
+      
+
+        <section id="animal-library"></section>
+        <div class="container"></div>
+
+
 
         <hr>
 
@@ -106,6 +113,14 @@
 
 
 
+
+        <section class="sort">
+
+            <button class="btn-time" data-time="19:00-19:45">19:00-19:45</button>
+            <button class="btn-time" data-time="20:00-21:00">20:00-21:00</button>
+            <button class="btn-time" data-time="21:00-22:00">21:00-22:00</button>
+            <button class="btn-time" data-time="22:00-23:00">22:00-23:00</button>
+            <button class="btn-time" data-time="00:00-00:45">00:00-00:45</button>
 
 
 
@@ -136,11 +151,26 @@
         </a>
         <div class="container"></div>
 
+        <div class="container">
+
+            <template>
+
+                <div class="animal">
+                    <section class="section_template">
 
 
+                        <h2 class="animals_name">ANIMALS</h2>
+                        <p class="amount">AMOUNT</p>
+                        <p class="species">SPECIES</p>
+                        <p class="cinomialname">BINOMIALNAME</p>
+                        <p class="fact">FACT</p>
+                        <img class="data_image">
 
+                    </section>
+                </div>
 
-
+            </template>
+        </div>
 
 
         <div class="container">
@@ -270,10 +300,45 @@
             //console.log(animals);
 
 
+
+
+//
+//FILTER TIME
+//
+
+
+            function filterTime(el) {
+
+                const clicked = el.target.getAttribute('data-time');
+
+                document.querySelectorAll('.animal').forEach(hideTime);
+
+                document.querySelectorAll('.animal').forEach(e => {
+                    if (e.getAttribute('data-time') == clicked) {
+                        e.classList.remove('hidden')
+                    }
+                })
+            }
+
+            function hideTime(timeElement) {
+                timeElement.classList.add('hidden');
+
+            }
+
+            function addListeners(btn) {
+                //            console.log(btn);
+                btn.addEventListener('click', filterTime);
+            }
+
+            document.querySelectorAll('.btn-time').forEach(addListeners);
+
+
+
             const template = document.querySelector("template").content;
             const copy = template.cloneNode(true);
 
             copy.querySelector(".animal").classList.add(animals.gsx$species.$t);
+            copy.querySelector(".animal").setAttribute('data-time', animals.gsx$amount.$t);
 
             copy.querySelector(".animals_name").textContent = animals.gsx$name.$t;
 
