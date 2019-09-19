@@ -176,7 +176,7 @@ nav {
 
 
         #first {
-            background: url(img/vectors/moon-background.svg);
+            background: url(img/vectors/bg-moon.svg);
             color: white;
             height: 720px;
             margin: 0 auto;
@@ -188,7 +188,7 @@ nav {
         }
 
         #first .bg {
-            background: url(img/vectors/zoo_hero_five.svg);
+            background: url(img/vectors/overlay.svg);
             height: 720px;
             margin: 0 auto;
             padding: 0;
@@ -223,7 +223,7 @@ nav {
     #landing {
         width: 100vw;
         height:100vh;
-        background-image: url(img/vectors/background-fallback.svg);
+        background-image: url(img/vectors/bg-tablet.svg);
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -241,7 +241,7 @@ nav {
     #landing {
         width: 100vw;
         height:100vh;
-        background-image: url(img/vectors/background-fallback-mobile.svg);
+        background-image: url(img/vectors/bg-mobile.svg);
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
