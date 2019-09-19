@@ -316,7 +316,7 @@ a:hover {
   color: deeppink;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
   .footer {
 
     visibility: hidden;
