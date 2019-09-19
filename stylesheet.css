@@ -424,6 +424,16 @@ a:hover {
 
 /*----------JULIA'S CSS------------*/
 
+.sort {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin: 3rem;
+}
+
+.sort > h1 {
+    grid-column: 1/-1;
+}
+
 .container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -454,8 +464,9 @@ a:hover {
 }
 
 button{
-    background-color: deeppink;
-  border: 2px solid yellow;
+/*    background-color: deeppink;*/
+    background-color: var(--tertiary-color);
+  border: 1px solid yellow;
     border-radius: 1rem;
   color: white;
   padding: 15px 32px;

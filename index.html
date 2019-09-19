@@ -51,19 +51,21 @@
 
 
             <div class="hide-parallax">
-            <!-- begin bottom layer -->
-    <div id="first">
-        <div class="bg"></div>
-    </div> <!-- end bottom layer -->
+                <!-- begin bottom layer -->
+                <div id="first">
+                    <div class="bg"></div>
+                </div> <!-- end bottom layer -->
 
-    <!-- begin top layer -->
-    <div id="third"></div> <!-- end top layer -->
+                <!-- begin top layer -->
+                <div id="third"></div> <!-- end top layer -->
             </div>
 
         </section>
 
 
-<a name="event"><h1>EVENT</h1></a>
+        <a name="event">
+            <h1>EVENT</h1>
+        </a>
 
 
         <section id="event-info">
@@ -98,35 +100,43 @@
         </section>
 
 
-       <hr>
+        <hr>
+
+
+
+
+
+
+
 
 
 
         <section id="animal-library"></section>
-        <a name="animals"><h1>ANIMALS</h1></a>
+        <a name="animals">
+            <h1>ANIMALS</h1>
+
+            <section class="sort">
+                <h1>Species</h1>
+                <button class="btn-mammal">Mammal</button>
+                <button class="btn-bird">Bird</button>
+                <button class="btn-reptile">Reptile</button>
+                <button class="btn-fish">Fish</button>
+                <button class="btn-crustacean">Crustacean</button>
+            </section>
+
+            <section class="sort">
+                <h1>Times</h1>
+                <button>19:00-19:45</button>
+                <button>20:00-21:00</button>
+                <button>21:00-22:00</button>
+                <button>22:00-23:00</button>
+                <button>00:00-00:45</button>
+            </section>
+
+        </a>
         <div class="container"></div>
 
-        <section class="sort">
 
-            <button class="btn-mammal">Mammal</button>
-            <button class="btn-bird">Bird</button>
-            <button class="btn-reptile">Reptile</button>
-            <button class="btn-fish">Fish</button>
-            <button class="btn-crustacean">Crustacean</button>
-
-        </section>
-
-
-
-      <section class="sort">
-
-            <button>19:00-19:45</button>
-            <button>20:00-21:00</button>
-            <button>21:00-22:00</button>
-            <button>22:00-23:00</button>
-            <button>00:00-00:45</button>
-
-        </section>
 
 
 
@@ -135,29 +145,31 @@
 
         <div class="container">
 
-        <template>
+            <template>
 
-            <div class="animal">
-                <section class="section_template">
+                <div class="animal">
+                    <section class="section_template">
 
-                    <h2 class="animals_name">ANIMALS</h2>
-                    <p class="amount">AMOUNT</p>
-                    <p class="species">SPECIES</p>
-                    <p class="cinomialname">BINOMIALNAME</p>
-                    <p class="fact">FACT</p>
-                    <img class="data_image">
+                        <h2 class="animals_name">ANIMALS</h2>
+                        <p class="amount">AMOUNT</p>
+                        <p class="species">SPECIES</p>
+                        <p class="cinomialname">BINOMIALNAME</p>
+                        <p class="fact">FACT</p>
+                        <img class="data_image">
+                        <button class="modal_button">Details</button>
+                    </section>
+                </div>
 
-                </section>
-            </div>
-
-        </template>
-</div>
-
-
-       <hr>
+            </template>
+        </div>
 
 
-        <a name="information"><h1>INFORMATION</h1></a>
+        <hr>
+
+
+        <a name="information">
+            <h1>INFORMATION</h1>
+        </a>
         <section id="map-contact">
 
 
@@ -199,13 +211,13 @@
         <p class="footer-address">
             Zoologisk Have, Roskildevej 32, 2000 Frederiksberg
 
- </p>
+        </p>
 
-            <ul class="footer-right">
-                <li><a href="#event-info">EVENT </a></li>
-                <li><a href="#animal-library">ANIMAL INFO</a></li>
-                <li><a href="#map-contact">VISIT US</a></li>
-            </ul>
+        <ul class="footer-right">
+            <li><a href="#event-info">EVENT </a></li>
+            <li><a href="#animal-library">ANIMAL INFO</a></li>
+            <li><a href="#map-contact">VISIT US</a></li>
+        </ul>
 
 
 
@@ -219,7 +231,7 @@
 
 
     <script>
-         function getAnimals() {
+        function getAnimals() {
             fetch("https://spreadsheets.google.com/feeds/list/15BNyxAmWzCBtgEIRHl7o0pHE6SdWg_UgOkOkzBEUzxQ/od6/public/values?alt=json")
                 .then(function(response) {
                     return response.json()
@@ -317,7 +329,6 @@
         }
 
         navSlide();
-
     </script>
 
     <!------PARALLAX------->
@@ -332,7 +343,6 @@
             $('#third').parallax("50%", .8);
 
         })
-
     </script>
 
 
