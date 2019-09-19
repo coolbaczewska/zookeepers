@@ -19,6 +19,12 @@
     padding: 0;
 }
 
+/*Max width wrapper*/
+.wrapper {
+    max-width: 1200px;
+    margin: auto;
+}
+
 html {
     box-sizing: border-box;
     scroll-behavior: smooth;
@@ -253,6 +259,7 @@ body {
     background-color: #161F30;
 }
 
+
 #event-info {
     display: grid;
     /*    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));*/
@@ -263,6 +270,21 @@ body {
     padding: 2rem;
     border-radius: 1rem;
     color: white;
+}
+
+/*For mobile - event section*/
+@media only screen and (max-width:768px) {
+    #event-info {
+    display: grid;
+    grid-template-columns: 1rem 1fr 1rem;
+    grid-template-areas:
+        ". event_details ."
+        ". upcoming_events ."
+        ". opening_times .";
+    padding: 2rem;
+    border-radius: 1rem;
+    color: white;
+}
 }
 
 .event_details {
@@ -360,6 +382,20 @@ a:hover {
         margin: 2rem;
 }
 
+/*For mobile - map section*/
+@media only screen and (max-width:768px) {
+    #map-contact {
+    display: grid;
+    grid-template-columns: 1rem 1fr 1rem;
+    grid-template-areas:
+        ". contact-grid ."
+        ". map-grid .";
+    padding: 2rem;
+    border-radius: 1rem;
+    color: white;
+}
+}
+
 .map img {
     max-width: 100%;
 }
@@ -387,6 +423,16 @@ a:hover {
 
 
 /*----------JULIA'S CSS------------*/
+
+.sort {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin: 3rem;
+}
+
+.sort > h1 {
+    grid-column: 1/-1;
+}
 
 .container {
     display: grid;
@@ -418,8 +464,9 @@ a:hover {
 }
 
 button{
-    background-color: deeppink;
-  border: 2px solid yellow;
+/*    background-color: deeppink;*/
+    background-color: var(--tertiary-color);
+  border: 1px solid yellow;
     border-radius: 1rem;
   color: white;
   padding: 15px 32px;
